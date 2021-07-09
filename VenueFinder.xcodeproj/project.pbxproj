@@ -1,0 +1,385 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		512B1039238653F1001CFED4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512B1038238653F1001CFED4 /* AppDelegate.swift */; };
+		512B103B238653F1001CFED4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512B103A238653F1001CFED4 /* SceneDelegate.swift */; };
+		512B1040238653F1001CFED4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 512B103E238653F1001CFED4 /* Main.storyboard */; };
+		512B1042238653F2001CFED4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 512B1041238653F2001CFED4 /* Assets.xcassets */; };
+		512B1045238653F2001CFED4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 512B1043238653F2001CFED4 /* LaunchScreen.storyboard */; };
+		512B104D23865438001CFED4 /* CityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512B104C23865438001CFED4 /* CityViewController.swift */; };
+		5154AC81239F4815001A0346 /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5154AC80239F4815001A0346 /* Venue.swift */; };
+		519A68222388A8B3004416F2 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519A68212388A8B3004416F2 /* TestViewController.swift */; };
+		519A76F523878FCF00682F56 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519A76F423878FCF00682F56 /* PhotoViewController.swift */; };
+		519A76F7238790E800682F56 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519A76F6238790E800682F56 /* PhotoCell.swift */; };
+		519A76F9238799B400682F56 /* PhotoHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519A76F8238799B400682F56 /* PhotoHeaderView.swift */; };
+		51CC8DDD23865613000BA67B /* CityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CC8DDC23865613000BA67B /* CityCell.swift */; };
+		51CC8DDF238657A3000BA67B /* VenueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CC8DDE238657A3000BA67B /* VenueViewController.swift */; };
+		51CC8DE1238658B2000BA67B /* VenueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CC8DE0238658B2000BA67B /* VenueCell.swift */; };
+		51CC8DE3238659AE000BA67B /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CC8DE2238659AE000BA67B /* SwiftyJSON.swift */; };
+		51E257BC238761CC007B628B /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E257BB238761CC007B628B /* City.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		512B1035238653F1001CFED4 /* VenueFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VenueFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		512B1038238653F1001CFED4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		512B103A238653F1001CFED4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		512B103F238653F1001CFED4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		512B1041238653F2001CFED4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		512B1044238653F2001CFED4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		512B1046238653F2001CFED4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		512B104C23865438001CFED4 /* CityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityViewController.swift; sourceTree = "<group>"; };
+		5154AC80239F4815001A0346 /* Venue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
+		519A68212388A8B3004416F2 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		519A76F423878FCF00682F56 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		519A76F6238790E800682F56 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		519A76F8238799B400682F56 /* PhotoHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoHeaderView.swift; sourceTree = "<group>"; };
+		51CC8DDC23865613000BA67B /* CityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCell.swift; sourceTree = "<group>"; };
+		51CC8DDE238657A3000BA67B /* VenueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueViewController.swift; sourceTree = "<group>"; };
+		51CC8DE0238658B2000BA67B /* VenueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueCell.swift; sourceTree = "<group>"; };
+		51CC8DE2238659AE000BA67B /* SwiftyJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		51E257BB238761CC007B628B /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		512B1032238653F1001CFED4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		512B102C238653F1001CFED4 = {
+			isa = PBXGroup;
+			children = (
+				512B1037238653F1001CFED4 /* VenueFinder */,
+				512B1036238653F1001CFED4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		512B1036238653F1001CFED4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				512B1035238653F1001CFED4 /* VenueFinder.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		512B1037238653F1001CFED4 /* VenueFinder */ = {
+			isa = PBXGroup;
+			children = (
+				512B1038238653F1001CFED4 /* AppDelegate.swift */,
+				512B103A238653F1001CFED4 /* SceneDelegate.swift */,
+				512B104C23865438001CFED4 /* CityViewController.swift */,
+				51CC8DDC23865613000BA67B /* CityCell.swift */,
+				51E257BB238761CC007B628B /* City.swift */,
+				51CC8DDE238657A3000BA67B /* VenueViewController.swift */,
+				51CC8DE0238658B2000BA67B /* VenueCell.swift */,
+				5154AC80239F4815001A0346 /* Venue.swift */,
+				519A76F423878FCF00682F56 /* PhotoViewController.swift */,
+				519A76F6238790E800682F56 /* PhotoCell.swift */,
+				519A76F8238799B400682F56 /* PhotoHeaderView.swift */,
+				512B103E238653F1001CFED4 /* Main.storyboard */,
+				519A68212388A8B3004416F2 /* TestViewController.swift */,
+				51CC8DE2238659AE000BA67B /* SwiftyJSON.swift */,
+				512B1041238653F2001CFED4 /* Assets.xcassets */,
+				512B1043238653F2001CFED4 /* LaunchScreen.storyboard */,
+				512B1046238653F2001CFED4 /* Info.plist */,
+			);
+			path = VenueFinder;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		512B1034238653F1001CFED4 /* FinalProject */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 512B1049238653F2001CFED4 /* Build configuration list for PBXNativeTarget "FinalProject" */;
+			buildPhases = (
+				512B1031238653F1001CFED4 /* Sources */,
+				512B1032238653F1001CFED4 /* Frameworks */,
+				512B1033238653F1001CFED4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FinalProject;
+			productName = FinalProject;
+			productReference = 512B1035238653F1001CFED4 /* VenueFinder.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		512B102D238653F1001CFED4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1110;
+				LastUpgradeCheck = 1250;
+				ORGANIZATIONNAME = "Precious Camille De Los Reyes";
+				TargetAttributes = {
+					512B1034238653F1001CFED4 = {
+						CreatedOnToolsVersion = 11.1;
+					};
+				};
+			};
+			buildConfigurationList = 512B1030238653F1001CFED4 /* Build configuration list for PBXProject "VenueFinder" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 512B102C238653F1001CFED4;
+			productRefGroup = 512B1036238653F1001CFED4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				512B1034238653F1001CFED4 /* FinalProject */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		512B1033238653F1001CFED4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				512B1045238653F2001CFED4 /* LaunchScreen.storyboard in Resources */,
+				512B1042238653F2001CFED4 /* Assets.xcassets in Resources */,
+				512B1040238653F1001CFED4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		512B1031238653F1001CFED4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				512B1039238653F1001CFED4 /* AppDelegate.swift in Sources */,
+				51CC8DDF238657A3000BA67B /* VenueViewController.swift in Sources */,
+				512B103B238653F1001CFED4 /* SceneDelegate.swift in Sources */,
+				51CC8DE1238658B2000BA67B /* VenueCell.swift in Sources */,
+				51CC8DDD23865613000BA67B /* CityCell.swift in Sources */,
+				519A76F523878FCF00682F56 /* PhotoViewController.swift in Sources */,
+				519A76F7238790E800682F56 /* PhotoCell.swift in Sources */,
+				51CC8DE3238659AE000BA67B /* SwiftyJSON.swift in Sources */,
+				519A76F9238799B400682F56 /* PhotoHeaderView.swift in Sources */,
+				51E257BC238761CC007B628B /* City.swift in Sources */,
+				519A68222388A8B3004416F2 /* TestViewController.swift in Sources */,
+				5154AC81239F4815001A0346 /* Venue.swift in Sources */,
+				512B104D23865438001CFED4 /* CityViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		512B103E238653F1001CFED4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				512B103F238653F1001CFED4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		512B1043238653F2001CFED4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				512B1044238653F2001CFED4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		512B1047238653F2001CFED4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		512B1048238653F2001CFED4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		512B104A238653F2001CFED4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QG9VN7U7JN;
+				INFOPLIST_FILE = VenueFinder/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.myprecioooous.VenueFinder;
+				PRODUCT_NAME = VenueFinder;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		512B104B238653F2001CFED4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QG9VN7U7JN;
+				INFOPLIST_FILE = VenueFinder/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.myprecioooous.VenueFinder;
+				PRODUCT_NAME = VenueFinder;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		512B1030238653F1001CFED4 /* Build configuration list for PBXProject "VenueFinder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				512B1047238653F2001CFED4 /* Debug */,
+				512B1048238653F2001CFED4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		512B1049238653F2001CFED4 /* Build configuration list for PBXNativeTarget "FinalProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				512B104A238653F2001CFED4 /* Debug */,
+				512B104B238653F2001CFED4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 512B102D238653F1001CFED4 /* Project object */;
+}
