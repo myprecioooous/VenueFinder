@@ -76,6 +76,7 @@
 		512B1037238653F1001CFED4 /* VenueFinder */ = {
 			isa = PBXGroup;
 			children = (
+				51CE193F269FA5490046BADE /* Services */,
 				512B1038238653F1001CFED4 /* AppDelegate.swift */,
 				512B103A238653F1001CFED4 /* SceneDelegate.swift */,
 				512B104C23865438001CFED4 /* CityViewController.swift */,
@@ -87,15 +88,22 @@
 				519A76F423878FCF00682F56 /* PhotoViewController.swift */,
 				519A76F6238790E800682F56 /* PhotoCell.swift */,
 				519A76F8238799B400682F56 /* PhotoHeaderView.swift */,
-				512B103E238653F1001CFED4 /* Main.storyboard */,
 				519A68212388A8B3004416F2 /* TestViewController.swift */,
 				51CC8DE2238659AE000BA67B /* SwiftyJSON.swift */,
 				512B1041238653F2001CFED4 /* Assets.xcassets */,
+				512B103E238653F1001CFED4 /* Main.storyboard */,
 				512B1043238653F2001CFED4 /* LaunchScreen.storyboard */,
 				512B1046238653F2001CFED4 /* Info.plist */,
 			);
 			path = VenueFinder;
 			sourceTree = SOURCE_ROOT;
+		};
+		51CE193F269FA5490046BADE /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
