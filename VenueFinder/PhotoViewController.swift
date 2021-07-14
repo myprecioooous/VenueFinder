@@ -71,30 +71,30 @@ class PhotoViewController: UIViewController, UICollectionViewDelegate, UICollect
 
     }
     
-    //MARK: - Bookmarking
-    @IBAction func starTapped(_ sender: UIButton) {
-        print("favorite tapped")
-        let tapped = !hasFavorited
-        hasFavorited = tapped
-        saveFavorite()
+//    //MARK: - Bookmarking
+//    @IBAction func starTapped(_ sender: UIButton) {
+//        print("favorite tapped")
+//        let tapped = !hasFavorited
+//        hasFavorited = tapped
+//        saveFavorite()
+//
+//        collectionView.reloadData()
+//
+//
+//
+//    }
 
-        collectionView.reloadData()
-
-
-
-    }
-
-    func saveFavorite() {
-        defaults.set(hasFavorited, forKey: "favorite")
-    }
-
-    func checkForFavorite() {
-        let isFavorite = defaults.bool(forKey: "favorite")
-
-        if isFavorite {
-           hasFavorited = true
-        }
-    }
+//    func saveFavorite() {
+//        defaults.set(hasFavorited, forKey: "favorite")
+//    }
+//
+//    func checkForFavorite() {
+//        let isFavorite = defaults.bool(forKey: "favorite")
+//
+//        if isFavorite {
+//           hasFavorited = true
+//        }
+//    }
     
     
     

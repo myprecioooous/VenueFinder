@@ -33,16 +33,6 @@ class VenueViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     var cityIndex: Int!
     
-    var favorites = [[false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false],
-                     [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false],
-                     [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false],
-                     [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false],
-                     [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false]
-                     
-    ]
-    
-    let defaults = UserDefaults.standard
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -51,20 +41,8 @@ class VenueViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         
         getVenueRecommendations()
-        //saveFavorite()
-        //checkForFavorite()
-        //checkForFavorite()
-        //loadInitialStateOfFavorites()
         
     }
-    
-    //MARK: Bookmarking
-    
-//    func loadInitialStateOfFavorites() {
-//        for _ in 0..<limit {
-//            favorites.append(false)
-//        }
-//    }
     
     @IBAction func starButtonTapped(_ sender: UIButton) {
         //checkForFavorite()
@@ -73,31 +51,16 @@ class VenueViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let position: CGPoint = sender.convert(.zero, to: venueTableView)
 
         guard let indexPath = venueTableView.indexPathForRow(at: position) else { return }
-        //print(indexPath.row)
-        
-        let hasFavoritedState = favorites[cityIndex][indexPath.row]
+
+        //let hasFavoritedState = favorites[cityIndex][indexPath.row]
         
         //accessing has favorites and setting it's value
-        favorites[cityIndex][indexPath.row] = !hasFavoritedState
-        //saveFavorite()
+        //favorites[cityIndex][indexPath.row] = !hasFavoritedState
         
         //reloading the row to change star color
         venueTableView.reloadRows(at: [indexPath], with: .fade)
         
     }
-    
-    //MARK: Saving
-    func saveFavorite() {
-        defaults.set(favorites, forKey: "favorites")
-    }
-
-    func checkForFavorite() {
-        let favoriteArr = defaults.array(forKey: "favorites") as? [[Bool]] ?? [[Bool]]()
-        //print(favoriteArr)
-
-        favorites = favoriteArr
-    }
-    
     
     //MARK: For Printing purposes, will delete
     override func viewWillDisappear(_ animated: Bool) {
@@ -172,17 +135,6 @@ class VenueViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
         //run task using resume
         task.resume()
-    
-        //cell.personLabel.text = persons[genderIndex][indexPath.row]
-        
-        if favorites[cityIndex][indexPath.row] == false {
-            cell.starButton.tintColor = .lightGray
-        } else {
-            cell.starButton.tintColor = .red
-        }
-//
-//        saveFavorite()
-        //checkForFavorite()
         
         return cell
     }
@@ -208,7 +160,7 @@ class VenueViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 photoVC.json = searchResults
                 photoVC.venueIndex = venueIndexPath.row
                 photoVC.venueName = venueName ?? "No Name"
-                photoVC.isBookMarked = favorites[cityIndex][venueIndexPath.row]
+                //photoVC.isBookMarked = favorites[cityIndex][venueIndexPath.row]
                }
            }
        }
