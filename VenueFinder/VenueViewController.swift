@@ -43,25 +43,7 @@ class VenueViewController: UIViewController, UITableViewDelegate, UITableViewDat
         getVenueRecommendations()
         
     }
-    
-    @IBAction func starButtonTapped(_ sender: UIButton) {
-        //checkForFavorite()
         
-        //need to see which cell is tapped so we can change the value of hasFavorited appopritely
-        let position: CGPoint = sender.convert(.zero, to: venueTableView)
-
-        guard let indexPath = venueTableView.indexPathForRow(at: position) else { return }
-
-        //let hasFavoritedState = favorites[cityIndex][indexPath.row]
-        
-        //accessing has favorites and setting it's value
-        //favorites[cityIndex][indexPath.row] = !hasFavoritedState
-        
-        //reloading the row to change star color
-        venueTableView.reloadRows(at: [indexPath], with: .fade)
-        
-    }
-    
     //MARK: For Printing purposes, will delete
     override func viewWillDisappear(_ animated: Bool) {
         //print(favorites)
