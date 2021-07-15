@@ -18,6 +18,7 @@ enum DataError: Error {
 class VenueAPI {
     
     typealias VenueDataCompletion = (JSON?, DataError?) -> ()
+    typealias VenuePhotoCompletion = (JSON?, DataError?) -> ()
     static let sharedInstance = VenueAPI()
     
     let limit = 25
@@ -42,6 +43,8 @@ class VenueAPI {
         
         let task = session.dataTask(with: request as URLRequest, completionHandler: {data, response, error -> Void in
             
+            
+            //FIX: - Will fix later 
             guard error == nil else {
               print("Failed request from API: \(error!.localizedDescription)")
               completion(nil, .failedRequest)
@@ -62,6 +65,35 @@ class VenueAPI {
             
             let json = JSON(data: data)
             completion(json, nil)
+        })
+        
+        task.resume()
+    }
+    
+    func getPhotos(_ venueID: String, completion: @escaping VenuePhotoCompletion) {
+        
+        let url = "https://api.foursquare.com/v2/venues/\(venueID)/photos?&client_id=\(client_id)&client_secret=\(client_secret)&v=20191121"
+        
+        
+        let request = NSMutableURLRequest(url: URL(string: url)!)
+        let session = URLSession.shared
+        
+        request.httpMethod = "GET"
+        
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue("application/json", forHTTPHeaderField: "Accept")
+        
+        let task = session.dataTask(with: request as URLRequest, completionHandler: {data, response, err -> Void in
+            
+            guard let data = data else {
+              print("No data returned from API")
+              completion(nil, .noData)
+              return
+            }
+            
+            let newJson = JSON(data: data)
+            completion(newJson, nil)
+            
         })
         
         task.resume()
