@@ -12,7 +12,7 @@ enum DataError: Error {
   case invalidResponse
   case noData
   case failedRequest
-  case invalidData
+  //case invalidData
 }
 
 class VenueAPI {
@@ -40,9 +40,27 @@ class VenueAPI {
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.addValue("application/json", forHTTPHeaderField: "Accept")
         
-        let task = session.dataTask(with: request as URLRequest, completionHandler: {data, response, err -> Void in
+        let task = session.dataTask(with: request as URLRequest, completionHandler: {data, response, error -> Void in
             
-            let json = JSON(data: data!)
+            guard error == nil else {
+              print("Failed request from API: \(error!.localizedDescription)")
+              completion(nil, .failedRequest)
+              return
+            }
+            
+            guard let data = data else {
+              print("No data returned from API")
+              completion(nil, .noData)
+              return
+            }
+            
+            guard (response as? HTTPURLResponse) != nil else {
+              print("Unable to process API response")
+              completion(nil, .invalidResponse)
+              return
+            }
+            
+            let json = JSON(data: data)
             completion(json, nil)
         })
         
