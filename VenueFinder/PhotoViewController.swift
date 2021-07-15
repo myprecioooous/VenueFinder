@@ -24,10 +24,6 @@ class PhotoViewController: UIViewController, UICollectionViewDelegate, UICollect
 
     @IBOutlet weak var collectionView: UICollectionView!
     
-    
-    let client_id = "HAHXS3GAZLAPTEQTUF4YEEBTWE2I321RTOVMWP0T5INAWKMU"
-    let secret_id = "FZSHMITQCWQXKIJLZRUBQJMST1DU4H5KYI0GC4DY3MBMQFF5"
-    
     //from previous screen
     var json: [JSON]!
     var venueIndex: Int!
@@ -46,19 +42,14 @@ class PhotoViewController: UIViewController, UICollectionViewDelegate, UICollect
         }
     }
     var photoSize = "300x300"
-    
-    var indexOfFavories = [Int]()
-    var hasFavorited = false
-    let defaults = UserDefaults.standard
-    var isBookMarked: Bool!
-        
+            
     override func viewDidLoad() {
         super.viewDidLoad()
         
         collectionView.delegate = self
         collectionView.dataSource = self
                 
-        getPhotos()
+        fetchPhotosForVenue()
         //checkForFavorite()
     }
     
@@ -127,12 +118,6 @@ class PhotoViewController: UIViewController, UICollectionViewDelegate, UICollect
         
         headerView.headerLabel.text = venueName
         
-       if isBookMarked == true {
-           headerView.starButton.tintColor = .red
-       } else {
-           headerView.starButton.tintColor = .lightGray
-       }
-        
         return headerView
     }
     
@@ -150,31 +135,15 @@ class PhotoViewController: UIViewController, UICollectionViewDelegate, UICollect
     }
     
     // MARK: Getting photos based on venue ID
-    func getPhotos() {
+    func fetchPhotosForVenue() {
         let vID: String = getVenueID()
         
-        let url = "https://api.foursquare.com/v2/venues/\(vID)/photos?&client_id=\(client_id)&client_secret=\(secret_id)&v=20191121"
+        VenueAPI.sharedInstance.getPhotos(vID) { [weak self] (data, error) in
+            //print(venueData ?? "")
+            self?.photoJson = data?["response"]["photos"]["items"].arrayValue ?? []
+            self?.createPhotoURL()
+        }
         
-        
-        let request = NSMutableURLRequest(url: URL(string: url)!)
-        let session = URLSession.shared
-        
-        request.httpMethod = "GET"
-        
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.addValue("application/json", forHTTPHeaderField: "Accept")
-        
-        let task = session.dataTask(with: request as URLRequest, completionHandler: {data, response, err -> Void in
-            
-            let newJson = JSON(data: data!)
-            //print(newJson)
-            self.photoJson = newJson["response"]["photos"]["items"].arrayValue
-            
-            self.createPhotoURL()
-            
-        })
-        
-        task.resume()
     }
     
 
