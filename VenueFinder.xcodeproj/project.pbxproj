@@ -22,6 +22,7 @@
 		51CC8DDF238657A3000BA67B /* VenueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CC8DDE238657A3000BA67B /* VenueViewController.swift */; };
 		51CC8DE1238658B2000BA67B /* VenueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CC8DE0238658B2000BA67B /* VenueCell.swift */; };
 		51CC8DE3238659AE000BA67B /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CC8DE2238659AE000BA67B /* SwiftyJSON.swift */; };
+		51CE1941269FAC4F0046BADE /* VenueAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CE1940269FAC4F0046BADE /* VenueAPI.swift */; };
 		51E257BC238761CC007B628B /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E257BB238761CC007B628B /* City.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,7 @@
 		51CC8DDE238657A3000BA67B /* VenueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueViewController.swift; sourceTree = "<group>"; };
 		51CC8DE0238658B2000BA67B /* VenueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueCell.swift; sourceTree = "<group>"; };
 		51CC8DE2238659AE000BA67B /* SwiftyJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		51CE1940269FAC4F0046BADE /* VenueAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueAPI.swift; sourceTree = "<group>"; };
 		51E257BB238761CC007B628B /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -101,6 +103,7 @@
 		51CE193F269FA5490046BADE /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				51CE1940269FAC4F0046BADE /* VenueAPI.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -178,6 +181,7 @@
 			files = (
 				512B1039238653F1001CFED4 /* AppDelegate.swift in Sources */,
 				51CC8DDF238657A3000BA67B /* VenueViewController.swift in Sources */,
+				51CE1941269FAC4F0046BADE /* VenueAPI.swift in Sources */,
 				512B103B238653F1001CFED4 /* SceneDelegate.swift in Sources */,
 				51CC8DE1238658B2000BA67B /* VenueCell.swift in Sources */,
 				51CC8DDD23865613000BA67B /* CityCell.swift in Sources */,

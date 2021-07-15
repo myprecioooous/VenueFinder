@@ -16,18 +16,12 @@ class VenueViewController: UIViewController, UITableViewDelegate, UITableViewDat
     //index of what was clicked
     
     
-    //MARK: - API STUFF
+    //MARK: - Initialization
     //from previous screen
     var latitude: Double!
     var longitude: Double!
     
-    let limit = 25
-    
-    let client_id = "HAHXS3GAZLAPTEQTUF4YEEBTWE2I321RTOVMWP0T5INAWKMU"
-    let client_secret = "FZSHMITQCWQXKIJLZRUBQJMST1DU4H5KYI0GC4DY3MBMQFF5"
-    
     let imageSize = "300x300"
-    //var photoURL: String? = ""
     
     var searchResults = [JSON]()
     
@@ -39,8 +33,7 @@ class VenueViewController: UIViewController, UITableViewDelegate, UITableViewDat
         venueTableView.delegate = self
         venueTableView.dataSource = self
         
-        
-        getVenueRecommendations()
+        fetchVenueForLocation()
         
     }
         
@@ -49,36 +42,18 @@ class VenueViewController: UIViewController, UITableViewDelegate, UITableViewDat
         //print(favorites)
     }
     
-    //MARK: - Copied from Mr. Jitters
-    func getVenueRecommendations() {
-        let urlLatitude = latitude!
-        let urlLongitude = longitude!
-        
-        let url = "https://api.foursquare.com/v2/search/recommendations?ll=\(urlLatitude),\(urlLongitude)&v=20191121&limit=\(limit)&client_id=\(client_id)&client_secret=\(client_secret)"
-        
-        
-        let request = NSMutableURLRequest(url: URL(string: url)!)
-        let session = URLSession.shared
-        
-        request.httpMethod = "GET"
-        
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.addValue("application/json", forHTTPHeaderField: "Accept")
-        
-        let task = session.dataTask(with: request as URLRequest, completionHandler: {data, response, err -> Void in
+    func fetchVenueForLocation(){
+        VenueAPI.sharedInstance.getVenueRecommendations(latitude,longitude) { [weak self] (venueData, error) in
+            //print(venueData ?? "")
+            self?.searchResults = venueData?["response"]["group"]["results"].arrayValue ?? []
             
-            let json = JSON(data: data!)
-            //print(json)
-            self.searchResults = json["response"]["group"]["results"].arrayValue
-                        
             DispatchQueue.main.async {
-                self.venueTableView.isHidden = false
-                self.venueTableView.reloadData()
+                self?.venueTableView.isHidden = false
+                self?.venueTableView.reloadData()
             }
-        })
-        
-        task.resume()
+        }
     }
+    
     
     // MARK: - Required delegate functions
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
