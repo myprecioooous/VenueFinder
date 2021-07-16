@@ -30,6 +30,8 @@ class PhotoViewController: UIViewController, UICollectionViewDelegate, UICollect
     var venueName: String!
     
     var photoJson = [JSON]()
+    var sampleURL = ["https://i.kym-cdn.com/photos/images/original/001/157/126/1f8", "https://i.kym-cdn.com/photos/images/original/001/157/120/c21.jpg", "https://i.kym-cdn.com/photos/images/original/001/157/124/459.png", "https://i.kym-cdn.com/photos/images/original/001/157/161/88b.jpg", "https://i.kym-cdn.com/photos/images/original/001/157/163/9c3.jpg", "https://i.kym-cdn.com/photos/images/original/001/157/160/d2c.jpg"]
+    
     var photoURL = [String]() {
         didSet {
             //updating the UI so we have to do this on the main thread
@@ -48,6 +50,24 @@ class PhotoViewController: UIViewController, UICollectionViewDelegate, UICollect
         
         collectionView.delegate = self
         collectionView.dataSource = self
+        
+        //adjust to width of the screen so photos fill the area accordingly
+        //access width of screen
+        let itemSize = UIScreen.main.bounds.width/3 - 3
+        
+        //create a new layout that's going to override current layout
+        let layout = UICollectionViewFlowLayout()
+        //customize layout
+        layout.sectionInset = UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
+        
+        //define size of each image
+        layout.itemSize = CGSize(width: itemSize, height: itemSize)
+        
+        layout.minimumInteritemSpacing = 3
+        layout.minimumLineSpacing = 3
+        
+        //add layout to our collection view
+        collectionView.collectionViewLayout = layout
                 
         fetchPhotosForVenue()
         //checkForFavorite()
@@ -73,13 +93,18 @@ class PhotoViewController: UIViewController, UICollectionViewDelegate, UICollect
             let imageURL = (prefix ?? "NoVal") + photoSize + (suffix ?? "NoVal")
             photoURL.append(imageURL)
         }
+        
+        photoURL = photoURL + sampleURL + sampleURL + sampleURL + sampleURL
+        
+        print("photo url contains: \(photoURL)" )
+        
     }
     
     //MARK: Required delegate functions
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
                 
         //return photoJson.count
-        return 1
+        return photoURL.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -89,7 +114,7 @@ class PhotoViewController: UIViewController, UICollectionViewDelegate, UICollect
         //MARK: Retrieving an image
         //cell.photoCellImage.image = UIImage(named: photos[indexPath.row])
         
-        if photoJson.count > 0 {
+        if photoURL.count > 0 {
             let url = NSURL(string: self.photoURL[indexPath.row])
             let data = NSData(contentsOf: url! as URL)
             cell.photoCellImage.image = UIImage(data: data! as Data)
