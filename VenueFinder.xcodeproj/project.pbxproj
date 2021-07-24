@@ -14,7 +14,6 @@
 		512B1045238653F2001CFED4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 512B1043238653F2001CFED4 /* LaunchScreen.storyboard */; };
 		512B104D23865438001CFED4 /* CityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512B104C23865438001CFED4 /* CityViewController.swift */; };
 		5154AC81239F4815001A0346 /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5154AC80239F4815001A0346 /* Venue.swift */; };
-		519A68222388A8B3004416F2 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519A68212388A8B3004416F2 /* TestViewController.swift */; };
 		519A76F523878FCF00682F56 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519A76F423878FCF00682F56 /* PhotoViewController.swift */; };
 		519A76F7238790E800682F56 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519A76F6238790E800682F56 /* PhotoCell.swift */; };
 		519A76F9238799B400682F56 /* PhotoHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519A76F8238799B400682F56 /* PhotoHeaderView.swift */; };
@@ -36,7 +35,6 @@
 		512B1046238653F2001CFED4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		512B104C23865438001CFED4 /* CityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityViewController.swift; sourceTree = "<group>"; };
 		5154AC80239F4815001A0346 /* Venue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
-		519A68212388A8B3004416F2 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		519A76F423878FCF00682F56 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		519A76F6238790E800682F56 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		519A76F8238799B400682F56 /* PhotoHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoHeaderView.swift; sourceTree = "<group>"; };
@@ -90,7 +88,6 @@
 				519A76F423878FCF00682F56 /* PhotoViewController.swift */,
 				519A76F6238790E800682F56 /* PhotoCell.swift */,
 				519A76F8238799B400682F56 /* PhotoHeaderView.swift */,
-				519A68212388A8B3004416F2 /* TestViewController.swift */,
 				51CC8DE2238659AE000BA67B /* SwiftyJSON.swift */,
 				512B1041238653F2001CFED4 /* Assets.xcassets */,
 				512B103E238653F1001CFED4 /* Main.storyboard */,
@@ -190,7 +187,6 @@
 				51CC8DE3238659AE000BA67B /* SwiftyJSON.swift in Sources */,
 				519A76F9238799B400682F56 /* PhotoHeaderView.swift in Sources */,
 				51E257BC238761CC007B628B /* City.swift in Sources */,
-				519A68222388A8B3004416F2 /* TestViewController.swift in Sources */,
 				5154AC81239F4815001A0346 /* Venue.swift in Sources */,
 				512B104D23865438001CFED4 /* CityViewController.swift in Sources */,
 			);
