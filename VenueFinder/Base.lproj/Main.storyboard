@@ -171,8 +171,8 @@
                                             <constraints>
                                                 <constraint firstItem="DZL-Yz-TAv" firstAttribute="centerX" secondItem="cmt-lZ-mce" secondAttribute="centerX" id="JwM-Gq-ehm"/>
                                                 <constraint firstItem="DZL-Yz-TAv" firstAttribute="leading" secondItem="cmt-lZ-mce" secondAttribute="leading" id="M6a-ne-rQw"/>
+                                                <constraint firstItem="DZL-Yz-TAv" firstAttribute="top" secondItem="cmt-lZ-mce" secondAttribute="top" id="PUE-bg-as6"/>
                                                 <constraint firstItem="DZL-Yz-TAv" firstAttribute="centerY" secondItem="cmt-lZ-mce" secondAttribute="centerY" id="Yiw-Uf-uZd"/>
-                                                <constraint firstItem="DZL-Yz-TAv" firstAttribute="top" secondItem="cmt-lZ-mce" secondAttribute="top" id="yFW-2a-7yI"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="300" height="300"/>
@@ -229,28 +229,11 @@
                     <navigationItem key="navigationItem" title="Photos" id="Vxf-Yj-ULp"/>
                     <connections>
                         <outlet property="collectionView" destination="ZrE-lf-DMb" id="5lP-iW-aUo"/>
-                        <segue destination="Otd-wD-ASw" kind="show" id="YfU-E7-Nes"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MVg-xW-mUn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2498.5507246376815" y="129.91071428571428"/>
-        </scene>
-        <!--Test View Controller-->
-        <scene sceneID="S9U-co-2lq">
-            <objects>
-                <viewController storyboardIdentifier="TestViewController" id="Otd-wD-ASw" customClass="TestViewController" customModule="VenueFinder" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ufZ-HY-Uya">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="y1r-Vf-aSI"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="J0D-TW-MSm"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RXx-WS-xvK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3176" y="127"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="RVP-wJ-DCq">

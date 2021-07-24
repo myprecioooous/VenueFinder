@@ -57,29 +57,21 @@ class PhotoViewController: UIViewController, UICollectionViewDelegate, UICollect
         
         //create a new layout that's going to override current layout
         let layout = UICollectionViewFlowLayout()
-        //customize layout
-        layout.sectionInset = UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
         
         //define size of each image
         layout.itemSize = CGSize(width: itemSize, height: itemSize)
         
+        //space between photos
         layout.minimumInteritemSpacing = 3
         layout.minimumLineSpacing = 3
         
         //add layout to our collection view
+        //collectionView.frame = .zero
         collectionView.collectionViewLayout = layout
-                
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        
         fetchPhotosForVenue()
         //checkForFavorite()
-    }
-    
-    //MARK: - For Printing purposes, will delete
-    override func viewWillDisappear(_ animated: Bool) {
-        //print(photoJson[0])
-        //createPhotoURL()
-        
-        //print(photoJson.count)
-
     }
     
     //MARK: Creating an array of photo url
@@ -94,7 +86,7 @@ class PhotoViewController: UIViewController, UICollectionViewDelegate, UICollect
             photoURL.append(imageURL)
         }
         
-        photoURL = photoURL + sampleURL + sampleURL + sampleURL + sampleURL
+        photoURL = photoURL + sampleURL + sampleURL + sampleURL
         
         print("photo url contains: \(photoURL)" )
         
@@ -129,9 +121,9 @@ class PhotoViewController: UIViewController, UICollectionViewDelegate, UICollect
     }
     
     @objc func tap(_ sender: UITapGestureRecognizer) {
-        let vc = storyboard?.instantiateViewController(withIdentifier: "TestViewController") as? TestViewController
-        
-        self.navigationController?.pushViewController(vc!, animated: true)
+//        let vc = storyboard?.instantiateViewController(withIdentifier: "TestViewController") as? TestViewController
+//        
+//        self.navigationController?.pushViewController(vc!, animated: true)
     }
     
 
@@ -145,6 +137,10 @@ class PhotoViewController: UIViewController, UICollectionViewDelegate, UICollect
         
         return headerView
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return CGSize(width: view.frame.width, height: 50)
+     }
     
     
     
