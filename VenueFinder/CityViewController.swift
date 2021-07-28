@@ -27,7 +27,7 @@ class CityViewController: UIViewController, UITableViewDelegate, UITableViewData
         
     }
     
-    // MARK: - Required delegate functions
+    // MARK: - Delegate functions
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return cities.count
     }
