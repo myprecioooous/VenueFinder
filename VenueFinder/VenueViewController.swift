@@ -36,12 +36,8 @@ class VenueViewController: UIViewController, UITableViewDelegate, UITableViewDat
         fetchVenueForLocation()
         
     }
-        
-    //MARK: For Printing purposes, will delete
-    override func viewWillDisappear(_ animated: Bool) {
-        //print(favorites)
-    }
     
+    //Fetching venue recommendations
     func fetchVenueForLocation(){
         VenueAPI.sharedInstance.getVenueRecommendations(latitude,longitude) { [weak self] (venueData, error) in
             //print(venueData ?? "")
@@ -55,7 +51,7 @@ class VenueViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     
-    // MARK: - Required delegate functions
+    // MARK: - Delegate functions
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return searchResults.count
     }
@@ -96,13 +92,12 @@ class VenueViewController: UIViewController, UITableViewDelegate, UITableViewDat
         return cell
     }
     
-    // MARK: - Additional delegate function
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         // The cell's height
         return 150
     }
     
-    // MARK: - To pass data from VenueViewController to PhotoViewController
+    // MARK: - Pass data from VenueViewController to PhotoViewController
        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
            //checking segue identifier

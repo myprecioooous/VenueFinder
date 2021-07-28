@@ -74,7 +74,32 @@ class PhotoViewController: UIViewController, UICollectionViewDelegate, UICollect
         //checkForFavorite()
     }
     
-    //MARK: Creating an array of photo url
+    //MARK: - Helper functions
+    
+    //Getting venueID of the venue that was clicked
+    func getVenueID() -> String {
+        let unwrappedJson = json!
+        let unwrappedVenueIndex = venueIndex!
+        
+        let venueID = unwrappedJson[unwrappedVenueIndex]["venue"]["id"].string
+        
+        return venueID!
+        
+    }
+    
+    //Getting photos based on venue ID
+    func fetchPhotosForVenue() {
+        let vID: String = getVenueID()
+        
+        VenueAPI.sharedInstance.getPhotos(vID) { [weak self] (data, error) in
+            //print(venueData ?? "")
+            self?.photoJson = data?["response"]["photos"]["items"].arrayValue ?? []
+            self?.createPhotoURL()
+        }
+        
+    }
+    
+    //Creating an array of photo url
     func createPhotoURL() {
          //print(photoJson.count)
         for index in 0..<photoJson.count {
@@ -92,7 +117,7 @@ class PhotoViewController: UIViewController, UICollectionViewDelegate, UICollect
         
     }
     
-    //MARK: Required delegate functions
+    //MARK: Delegate functions
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
                 
         //return photoJson.count
@@ -103,9 +128,7 @@ class PhotoViewController: UIViewController, UICollectionViewDelegate, UICollect
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "photoCell", for: indexPath) as! PhotoCell
         
-        //MARK: Retrieving an image
-        //cell.photoCellImage.image = UIImage(named: photos[indexPath.row])
-        
+        //Retrieving an image
         if photoURL.count > 0 {
             let url = NSURL(string: self.photoURL[indexPath.row])
             let data = NSData(contentsOf: url! as URL)
@@ -126,10 +149,8 @@ class PhotoViewController: UIViewController, UICollectionViewDelegate, UICollect
 //        self.navigationController?.pushViewController(vc!, animated: true)
     }
     
-
     
-    
-    // MARK: - For implementing header
+    // MARK: - Header
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "headerID", for: indexPath) as! PhotoHeaderView
         
@@ -142,30 +163,4 @@ class PhotoViewController: UIViewController, UICollectionViewDelegate, UICollect
         return CGSize(width: view.frame.width, height: 50)
      }
     
-    
-    
-    // MARK: Getting venueID of the venue that was clicked
-    func getVenueID() -> String {
-        let unwrappedJson = json!
-        let unwrappedVenueIndex = venueIndex!
-        
-        let venueID = unwrappedJson[unwrappedVenueIndex]["venue"]["id"].string
-        
-        return venueID!
-        
-    }
-    
-    // MARK: Getting photos based on venue ID
-    func fetchPhotosForVenue() {
-        let vID: String = getVenueID()
-        
-        VenueAPI.sharedInstance.getPhotos(vID) { [weak self] (data, error) in
-            //print(venueData ?? "")
-            self?.photoJson = data?["response"]["photos"]["items"].arrayValue ?? []
-            self?.createPhotoURL()
-        }
-        
-    }
-    
-
 }
