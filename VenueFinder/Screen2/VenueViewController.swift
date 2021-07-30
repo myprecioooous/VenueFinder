@@ -23,7 +23,7 @@ class VenueViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     let imageSize = "300x300"
     
-    var searchResults = [JSON]()
+    var searchResults = [Results]()
     
     var cityIndex: Int!
     
@@ -41,7 +41,9 @@ class VenueViewController: UIViewController, UITableViewDelegate, UITableViewDat
     func fetchVenueForLocation(){
         VenueAPI.sharedInstance.getVenueRecommendations(latitude,longitude) { [weak self] (venueData, error) in
             //print(venueData ?? "")
-            self?.searchResults = venueData?["response"]["group"]["results"].arrayValue ?? []
+            if error == nil {
+                self?.searchResults = venueData?.response.group.results ?? []
+            }
             
             DispatchQueue.main.async {
                 self?.venueTableView.isHidden = false
@@ -59,15 +61,15 @@ class VenueViewController: UIViewController, UITableViewDelegate, UITableViewDat
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "venueCell", for: indexPath) as! VenueCell
-        cell.venueNameLabel.text = searchResults[(indexPath as NSIndexPath).row]["venue"]["name"].string
-        cell.venueLocationLabel.text = searchResults[(indexPath as NSIndexPath).row]["venue"]["location"]["address"].string
-        cell.venueCategoryLabel.text = searchResults[(indexPath as NSIndexPath).row]["venue"]["categories"][0]["name"].string
+        cell.venueNameLabel.text = searchResults[(indexPath as NSIndexPath).row].venue.name
+        cell.venueLocationLabel.text = searchResults[(indexPath as NSIndexPath).row].venue.location.address
+        cell.venueCategoryLabel.text = searchResults[(indexPath as NSIndexPath).row].venue.categories[0].name
         
         //MARK: Constructing an image url
         cell.thumbnailImage.image = UIImage(named: "gudetama")
         
-        let prefix = searchResults[(indexPath as NSIndexPath).row]["photo"]["prefix"].string
-        let suffix = searchResults[(indexPath as NSIndexPath).row]["photo"]["suffix"].string
+        let prefix = searchResults[(indexPath as NSIndexPath).row].photo?.prefix
+        let suffix = searchResults[(indexPath as NSIndexPath).row].photo?.suffix
         
         // MARK: - Retrieving image
         let imageURL = URL(string: (prefix ?? "NoVal") + imageSize + (suffix ?? "NoVal"))!
@@ -108,7 +110,7 @@ class VenueViewController: UIViewController, UITableViewDelegate, UITableViewDat
                //getting indexPath of selected tow
                if let venueIndexPath = venueTableView.indexPathForSelectedRow {
                 
-                let venueName = searchResults[venueIndexPath.row]["venue"]["name"].string                
+                let venueName = searchResults[venueIndexPath.row].venue.name
                 photoVC.json = searchResults
                 photoVC.venueIndex = venueIndexPath.row
                 photoVC.venueName = venueName ?? "No Name"
