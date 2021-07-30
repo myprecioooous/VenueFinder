@@ -12,13 +12,13 @@ enum DataError: Error {
   case invalidResponse
   case noData
   case failedRequest
-  //case invalidData
+  case invalidData
 }
 
 class VenueAPI {
     
-    typealias VenueDataCompletion = (JSON?, DataError?) -> ()
-    typealias VenuePhotoCompletion = (JSON?, DataError?) -> ()
+    typealias VenueDataCompletion = (VenueData?, DataError?) -> ()
+    typealias VenuePhotoCompletion = (PhotoData?, DataError?) -> ()
     static let sharedInstance = VenueAPI()
     
     let limit = 25
@@ -63,8 +63,17 @@ class VenueAPI {
               return
             }
             
-            let json = JSON(data: data)
-            completion(json, nil)
+            
+            do {
+              let decoder = JSONDecoder()
+                let venueData: VenueData = try decoder.decode(VenueData.self, from: data)
+
+              completion(venueData, nil)
+            } catch {
+              print("Unable to decode Venue response: \(error.localizedDescription)")
+              completion(nil, .invalidData)
+            }
+            
         })
         
         task.resume()
@@ -91,8 +100,15 @@ class VenueAPI {
               return
             }
             
-            let newJson = JSON(data: data)
-            completion(newJson, nil)
+            do {
+              let decoder = JSONDecoder()
+                let newData: PhotoData = try decoder.decode(PhotoData.self, from: data)
+
+              completion(newData, nil)
+            } catch {
+              print("Unable to decode Venue response: \(error.localizedDescription)")
+              completion(nil, .invalidData)
+            }
             
         })
         
