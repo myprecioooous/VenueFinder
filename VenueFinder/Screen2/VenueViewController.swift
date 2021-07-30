@@ -113,7 +113,7 @@ class VenueViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 let venueName = searchResults[venueIndexPath.row].venue.name
                 photoVC.json = searchResults
                 photoVC.venueIndex = venueIndexPath.row
-                photoVC.venueName = venueName ?? "No Name"
+                photoVC.venueName = venueName 
                 //photoVC.isBookMarked = favorites[cityIndex][venueIndexPath.row]
                }
            }
