@@ -25,11 +25,11 @@ class PhotoViewController: UIViewController, UICollectionViewDelegate, UICollect
     @IBOutlet weak var collectionView: UICollectionView!
     
     //from previous screen
-    var json: [JSON]!
+    var json: [Results]!
     var venueIndex: Int!
     var venueName: String!
     
-    var photoJson = [JSON]()
+    var photoJson = [Items]()
     var sampleURL = ["https://i.kym-cdn.com/photos/images/original/001/157/126/1f8", "https://i.kym-cdn.com/photos/images/original/001/157/120/c21.jpg", "https://i.kym-cdn.com/photos/images/original/001/157/124/459.png", "https://i.kym-cdn.com/photos/images/original/001/157/161/88b.jpg", "https://i.kym-cdn.com/photos/images/original/001/157/163/9c3.jpg", "https://i.kym-cdn.com/photos/images/original/001/157/160/d2c.jpg"]
     
     var photoURL = [String]() {
@@ -81,9 +81,9 @@ class PhotoViewController: UIViewController, UICollectionViewDelegate, UICollect
         let unwrappedJson = json!
         let unwrappedVenueIndex = venueIndex!
         
-        let venueID = unwrappedJson[unwrappedVenueIndex]["venue"]["id"].string
+        let venueID = unwrappedJson[unwrappedVenueIndex].venue.id
         
-        return venueID!
+        return venueID
         
     }
     
@@ -93,7 +93,7 @@ class PhotoViewController: UIViewController, UICollectionViewDelegate, UICollect
         
         VenueAPI.sharedInstance.getPhotos(vID) { [weak self] (data, error) in
             //print(venueData ?? "")
-            self?.photoJson = data?["response"]["photos"]["items"].arrayValue ?? []
+            self?.photoJson = data?.response.photos.items ?? []
             self?.createPhotoURL()
         }
         
@@ -104,10 +104,10 @@ class PhotoViewController: UIViewController, UICollectionViewDelegate, UICollect
          //print(photoJson.count)
         for index in 0..<photoJson.count {
             //print(photoJson[index])
-            let prefix = photoJson[index]["prefix"].string
-            let suffix = photoJson[index]["suffix"].string
+            let prefix = photoJson[index].prefix
+            let suffix = photoJson[index].suffix
 
-            let imageURL = (prefix ?? "NoVal") + photoSize + (suffix ?? "NoVal")
+            let imageURL = prefix + photoSize + suffix
             photoURL.append(imageURL)
         }
         
