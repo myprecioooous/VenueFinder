@@ -107,7 +107,7 @@ class PhotoViewController: UIViewController, UICollectionViewDelegate, UICollect
             let prefix = photoJson[index].prefix
             let suffix = photoJson[index].suffix
 
-            let imageURL = (prefix ?? "NoVal") + photoSize + (suffix ?? "NoVal")
+            let imageURL = prefix + photoSize + suffix
             photoURL.append(imageURL)
         }
         

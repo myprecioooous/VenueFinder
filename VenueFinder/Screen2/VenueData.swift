@@ -13,7 +13,6 @@ struct VenueData: Decodable {
     var response: Response
 }
 
-
 struct Response: Decodable {
     var group: Group
 }
