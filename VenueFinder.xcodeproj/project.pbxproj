@@ -76,18 +76,12 @@
 		512B1037238653F1001CFED4 /* VenueFinder */ = {
 			isa = PBXGroup;
 			children = (
-				51CE193F269FA5490046BADE /* Services */,
 				512B1038238653F1001CFED4 /* AppDelegate.swift */,
 				512B103A238653F1001CFED4 /* SceneDelegate.swift */,
-				512B104C23865438001CFED4 /* CityViewController.swift */,
-				51CC8DDC23865613000BA67B /* CityCell.swift */,
-				51E257BB238761CC007B628B /* City.swift */,
-				51CC8DDE238657A3000BA67B /* VenueViewController.swift */,
-				51CC8DE0238658B2000BA67B /* VenueCell.swift */,
-				5154AC80239F4815001A0346 /* Venue.swift */,
-				519A76F423878FCF00682F56 /* PhotoViewController.swift */,
-				519A76F6238790E800682F56 /* PhotoCell.swift */,
-				519A76F8238799B400682F56 /* PhotoHeaderView.swift */,
+				51CE193F269FA5490046BADE /* Services */,
+				519B9BEE26B4C18900A3BEF8 /* Screen1 */,
+				519B9BED26B4C17F00A3BEF8 /* Screen2 */,
+				519B9BEC26B4C17400A3BEF8 /* Screen3 */,
 				51CC8DE2238659AE000BA67B /* SwiftyJSON.swift */,
 				512B1041238653F2001CFED4 /* Assets.xcassets */,
 				512B103E238653F1001CFED4 /* Main.storyboard */,
@@ -96,6 +90,36 @@
 			);
 			path = VenueFinder;
 			sourceTree = SOURCE_ROOT;
+		};
+		519B9BEC26B4C17400A3BEF8 /* Screen3 */ = {
+			isa = PBXGroup;
+			children = (
+				519A76F423878FCF00682F56 /* PhotoViewController.swift */,
+				519A76F6238790E800682F56 /* PhotoCell.swift */,
+				519A76F8238799B400682F56 /* PhotoHeaderView.swift */,
+			);
+			path = Screen3;
+			sourceTree = "<group>";
+		};
+		519B9BED26B4C17F00A3BEF8 /* Screen2 */ = {
+			isa = PBXGroup;
+			children = (
+				51CC8DDE238657A3000BA67B /* VenueViewController.swift */,
+				51CC8DE0238658B2000BA67B /* VenueCell.swift */,
+				5154AC80239F4815001A0346 /* Venue.swift */,
+			);
+			path = Screen2;
+			sourceTree = "<group>";
+		};
+		519B9BEE26B4C18900A3BEF8 /* Screen1 */ = {
+			isa = PBXGroup;
+			children = (
+				512B104C23865438001CFED4 /* CityViewController.swift */,
+				51CC8DDC23865613000BA67B /* CityCell.swift */,
+				51E257BB238761CC007B628B /* City.swift */,
+			);
+			path = Screen1;
+			sourceTree = "<group>";
 		};
 		51CE193F269FA5490046BADE /* Services */ = {
 			isa = PBXGroup;
