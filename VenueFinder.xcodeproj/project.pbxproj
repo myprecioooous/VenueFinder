@@ -21,7 +21,6 @@
 		51CC8DDD23865613000BA67B /* CityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CC8DDC23865613000BA67B /* CityCell.swift */; };
 		51CC8DDF238657A3000BA67B /* VenueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CC8DDE238657A3000BA67B /* VenueViewController.swift */; };
 		51CC8DE1238658B2000BA67B /* VenueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CC8DE0238658B2000BA67B /* VenueCell.swift */; };
-		51CC8DE3238659AE000BA67B /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CC8DE2238659AE000BA67B /* SwiftyJSON.swift */; };
 		51CE1941269FAC4F0046BADE /* VenueAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CE1940269FAC4F0046BADE /* VenueAPI.swift */; };
 		51E257BC238761CC007B628B /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E257BB238761CC007B628B /* City.swift */; };
 /* End PBXBuildFile section */
@@ -43,7 +42,6 @@
 		51CC8DDC23865613000BA67B /* CityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCell.swift; sourceTree = "<group>"; };
 		51CC8DDE238657A3000BA67B /* VenueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueViewController.swift; sourceTree = "<group>"; };
 		51CC8DE0238658B2000BA67B /* VenueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueCell.swift; sourceTree = "<group>"; };
-		51CC8DE2238659AE000BA67B /* SwiftyJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		51CE1940269FAC4F0046BADE /* VenueAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueAPI.swift; sourceTree = "<group>"; };
 		51E257BB238761CC007B628B /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -84,7 +82,6 @@
 				519B9BEE26B4C18900A3BEF8 /* Screen1 */,
 				519B9BED26B4C17F00A3BEF8 /* Screen2 */,
 				519B9BEC26B4C17400A3BEF8 /* Screen3 */,
-				51CC8DE2238659AE000BA67B /* SwiftyJSON.swift */,
 				512B1041238653F2001CFED4 /* Assets.xcassets */,
 				512B103E238653F1001CFED4 /* Main.storyboard */,
 				512B1043238653F2001CFED4 /* LaunchScreen.storyboard */,
@@ -211,7 +208,6 @@
 				51CC8DDD23865613000BA67B /* CityCell.swift in Sources */,
 				519A76F523878FCF00682F56 /* PhotoViewController.swift in Sources */,
 				519A76F7238790E800682F56 /* PhotoCell.swift in Sources */,
-				51CC8DE3238659AE000BA67B /* SwiftyJSON.swift in Sources */,
 				519A76F9238799B400682F56 /* PhotoHeaderView.swift in Sources */,
 				519B9BF026B4C3EE00A3BEF8 /* PhotoData.swift in Sources */,
 				51E257BC238761CC007B628B /* City.swift in Sources */,
