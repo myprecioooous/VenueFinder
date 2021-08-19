@@ -9,7 +9,9 @@
 import Foundation
 
 struct City {
+    let countryName: String
     let cityName: String
+    let cityPhoto: String
     let cityLatitude: Double
     let cityLongitude: Double
 }
