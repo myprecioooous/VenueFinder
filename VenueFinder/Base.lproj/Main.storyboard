@@ -189,7 +189,7 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ZrE-lf-DMb">
                                 <rect key="frame" x="0.0" y="44" width="320" height="470"/>
-                                <color key="backgroundColor" red="0.98039215690000003" green="0.50980392159999999" blue="0.19215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.96848052740000001" green="0.93953340870000002" blue="0.80084401250000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="JK5-GM-Qm5">
                                     <size key="itemSize" width="300" height="300"/>
                                     <size key="headerReferenceSize" width="50" height="50"/>
@@ -284,7 +284,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fXN-Vn-5X8" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kbP-n7-CS7">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
