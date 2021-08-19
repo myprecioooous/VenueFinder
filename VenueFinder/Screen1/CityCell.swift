@@ -10,5 +10,7 @@ import UIKit
 
 class CityCell: UITableViewCell {
 
+    @IBOutlet weak var cityPhoto: UIImageView!
     @IBOutlet weak var cityNameLabel: UILabel!
+    @IBOutlet weak var countryNameLabel: UILabel!
 }

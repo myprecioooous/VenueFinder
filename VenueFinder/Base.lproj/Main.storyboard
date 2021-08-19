@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fXN-Vn-5X8">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina3_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -15,32 +15,69 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="CityViewController" customModule="VenueFinder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eOV-Nc-Hc4">
-                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eOV-Nc-Hc4">
+                                <rect key="frame" x="0.0" y="44" width="320" height="436"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cityCell" id="An1-SX-xee" customClass="CityCell" customModule="VenueFinder" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cityCell" rowHeight="242" id="An1-SX-xee" customClass="CityCell" customModule="VenueFinder" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="24.5" width="320" height="242"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="An1-SX-xee" id="t5B-yt-s8g">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="242"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="guO-EQ-RGE">
-                                                    <rect key="frame" x="20" y="11" width="386" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paris" translatesAutoresizingMaskIntoConstraints="NO" id="huk-LV-k7M" userLabel="City Photo">
+                                                    <rect key="frame" x="10" y="11" width="300" height="220"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="huk-LV-k7M" secondAttribute="height" multiplier="301:220" id="MPn-YZ-A9m"/>
+                                                        <constraint firstAttribute="height" constant="220" id="ukE-JM-StU"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oBH-i3-LPZ">
+                                                    <rect key="frame" x="18" y="28" width="292" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="oBH-i3-LPZ" secondAttribute="height" multiplier="146:15" id="fiA-dj-PDr"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
+                                                    <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <size key="shadowOffset" width="2" height="0.0"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="guO-EQ-RGE">
+                                                    <rect key="frame" x="18" y="69" width="292" height="36"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="guO-EQ-RGE" secondAttribute="height" multiplier="73:9" id="xia-yI-S2C"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <size key="shadowOffset" width="2" height="0.0"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="guO-EQ-RGE" firstAttribute="top" secondItem="oBH-i3-LPZ" secondAttribute="bottom" constant="11" id="0VM-f2-z8d"/>
+                                                <constraint firstItem="guO-EQ-RGE" firstAttribute="leading" secondItem="t5B-yt-s8g" secondAttribute="leading" constant="18" id="2Ri-Am-e0U"/>
+                                                <constraint firstAttribute="trailing" secondItem="huk-LV-k7M" secondAttribute="trailing" constant="10" id="6R5-yg-yhb"/>
+                                                <constraint firstAttribute="trailing" secondItem="oBH-i3-LPZ" secondAttribute="trailing" constant="10" id="9CL-oY-iTc"/>
+                                                <constraint firstItem="huk-LV-k7M" firstAttribute="centerY" secondItem="t5B-yt-s8g" secondAttribute="centerY" id="AR2-G1-Och"/>
+                                                <constraint firstItem="huk-LV-k7M" firstAttribute="leading" secondItem="t5B-yt-s8g" secondAttribute="leading" constant="10" id="DGh-RM-5hA"/>
+                                                <constraint firstAttribute="bottom" secondItem="huk-LV-k7M" secondAttribute="bottom" constant="11" id="Hlp-Wv-Fzw"/>
+                                                <constraint firstItem="huk-LV-k7M" firstAttribute="centerX" secondItem="t5B-yt-s8g" secondAttribute="centerX" id="JU4-yR-t7I"/>
+                                                <constraint firstItem="oBH-i3-LPZ" firstAttribute="leading" secondItem="t5B-yt-s8g" secondAttribute="leading" constant="18" id="Lba-x3-EvK"/>
+                                                <constraint firstItem="oBH-i3-LPZ" firstAttribute="top" secondItem="t5B-yt-s8g" secondAttribute="top" constant="28" id="byq-Rf-dK2"/>
+                                                <constraint firstAttribute="trailing" secondItem="guO-EQ-RGE" secondAttribute="trailing" constant="10" id="er1-MA-UOQ"/>
+                                                <constraint firstItem="huk-LV-k7M" firstAttribute="top" secondItem="t5B-yt-s8g" secondAttribute="top" constant="11" id="fMm-W8-7Pg"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="cityNameLabel" destination="guO-EQ-RGE" id="fUf-9I-NkG"/>
+                                            <outlet property="cityPhoto" destination="huk-LV-k7M" id="maG-cb-VEE"/>
+                                            <outlet property="countryNameLabel" destination="oBH-i3-LPZ" id="TYZ-PT-efd"/>
                                             <segue destination="GqO-RF-L6D" kind="show" identifier="CityVCToVenueVC" id="Zk1-Jg-cn4"/>
                                         </connections>
                                     </tableViewCell>
@@ -49,6 +86,12 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="eOV-Nc-Hc4" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="1gp-uO-amL"/>
+                            <constraint firstItem="eOV-Nc-Hc4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="YR9-ps-kgx"/>
+                            <constraint firstAttribute="bottom" secondItem="eOV-Nc-Hc4" secondAttribute="bottom" id="khy-eZ-dgT"/>
+                            <constraint firstItem="eOV-Nc-Hc4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="sd4-4h-PDh"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Cities" id="dEn-pZ-Q48"/>
                     <connections>
@@ -57,14 +100,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1047.8260869565217" y="129.91071428571428"/>
+            <point key="canvasLocation" x="1046.25" y="128.75"/>
         </scene>
         <!--Venues-->
         <scene sceneID="FbU-iy-2Zn">
             <objects>
                 <viewController id="GqO-RF-L6D" customClass="VenueViewController" customModule="VenueFinder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AUC-yv-V1A">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4YZ-fY-emP">
@@ -141,11 +184,11 @@
             <objects>
                 <viewController storyboardIdentifier="PhotoViewController" id="x6S-Th-9XF" customClass="PhotoViewController" customModule="VenueFinder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ex5-Oj-ELB">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ZrE-lf-DMb">
-                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <rect key="frame" x="0.0" y="44" width="320" height="470"/>
                                 <color key="backgroundColor" red="0.98039215690000003" green="0.50980392159999999" blue="0.19215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="JK5-GM-Qm5">
                                     <size key="itemSize" width="300" height="300"/>
@@ -158,7 +201,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="photoCell" id="ntG-oa-hf7" customClass="PhotoCell" customModule="VenueFinder" customModuleProvider="target">
-                                        <rect key="frame" x="57" y="50" width="300" height="300"/>
+                                        <rect key="frame" x="10" y="50" width="300" height="300"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="cmt-lZ-mce" customClass="PhotoCell" customModule="VenueFinder" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
@@ -182,17 +225,17 @@
                                     </collectionViewCell>
                                 </cells>
                                 <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="headerID" id="PbO-qa-uzi" customClass="PhotoHeaderView" customModule="VenueFinder" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CxF-KE-DUm">
-                                            <rect key="frame" x="15" y="0.0" width="346" height="50"/>
+                                            <rect key="frame" x="15" y="0.0" width="252" height="50"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FZW-96-23y">
-                                            <rect key="frame" x="373" y="8" width="33" height="32"/>
+                                            <rect key="frame" x="279" y="8" width="33" height="32"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="33" id="wo4-aB-Jce"/>
                                             </constraints>
@@ -241,7 +284,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fXN-Vn-5X8" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kbP-n7-CS7">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -256,6 +299,7 @@
     </scenes>
     <resources>
         <image name="emptyStar" width="256" height="256"/>
+        <image name="paris" width="1680" height="1050"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
